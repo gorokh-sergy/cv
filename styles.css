@@ -16,6 +16,19 @@ body {
     background: #fff;
     box-shadow: 0 2px 16px rgba(0,0,0,.12);
 }
+.download {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background: #205e83;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1;
+    text-decoration: none;
+}
 .header {
     display: grid;
     grid-template-columns: 29mm 1fr;
@@ -133,7 +146,8 @@ ul.skills li::marker, .bullet-list li::marker { color: #3289bd; }
 }
 @media screen and (max-width: 760px) {
     body { background: #fff; }
-    .page { width: 100%; min-height: 0; margin: 0; padding: 22px; box-shadow: none; }
+    .page { width: 100%; min-height: 0; margin: 0; padding: 58px 22px 22px; box-shadow: none; }
+    .download { top: 12px; right: 16px; }
     .header { grid-template-columns: 100px 1fr; gap: 14px; }
     .portrait { width: 100px; height: 100px; }
     h1 { font-size: clamp(19px, 5vw, 27px); }
@@ -150,7 +164,7 @@ ul.skills li::marker, .bullet-list li::marker { color: #3289bd; }
     .stack { font-size: 8px; }
 }
 @media screen and (max-width: 480px) {
-    .page { padding: 16px; }
+    .page { padding: 58px 16px 16px; }
     .header { grid-template-columns: 76px 1fr; gap: 10px; }
     .portrait { width: 76px; height: 82px; }
     .columns { grid-template-columns: 1fr; gap: 20px; }
@@ -162,4 +176,5 @@ ul.skills li::marker, .bullet-list li::marker { color: #3289bd; }
 @media print {
     body { background: #fff; }
     .page { margin: 0; box-shadow: none; }
+    .download { display: none; }
 }
